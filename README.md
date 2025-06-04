@@ -1,10 +1,12 @@
+Reproducer for [http://localhost:8080](https://github.com/symfony/symfony/issues/59205)
+
 # How to set up
 
 1. `cd docker`
 2. `make`
 3. *(after it is done you should be inside the container)*
 4. make sure folder `var/log` is writeable
-4. Open [http://localhost:8080] in browser (it triggers the warning)
+4. Open [http://localhost:8080](http://localhost:8080) in browser (it triggers the warning)
 5. open related log file in `var/log`
 
 It should produce log entries such as:
