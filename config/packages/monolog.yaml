@@ -1,0 +1,41 @@
+when@dev:
+    monolog:
+        handlers:
+            main:
+                type: fingers_crossed
+                action_level: warning
+                handler: rotating
+                excluded_http_codes: [403, 404]
+
+            rotating:
+                # rotating means, that for each day, one file is kept. max_files = 5 means, files for 5 days are kept.
+                type: rotating_file
+                max_files: 10
+                # log to var/log/(environment).log
+                path: '%kernel.logs_dir%/%kernel.environment%/%kernel.environment%.log'
+                level: warning
+
+                formatter: 'monolog.formatter.json'
+
+# when@test:
+#     monolog:
+
+when@prod:
+    monolog:
+        handlers:
+            main:
+                type: fingers_crossed
+                action_level: error
+                handler: rotating
+                excluded_http_codes: [403, 404]
+
+            rotating:
+                # rotating means, that for each day, one file is kept. max_files = 5 means, files for 5 days are kept.
+                type: rotating_file
+                max_files: 5
+
+                # log to var/log/(environment).log
+                path: '%kernel.logs_dir%/%kernel.environment%/%kernel.environment%.log'
+                level: error
+
+                formatter: 'monolog.formatter.json'

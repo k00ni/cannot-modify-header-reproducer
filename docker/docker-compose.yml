@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    mcon-monc:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: mcon-monc
+        ports:
+            - 8080:80   # Apache
+        volumes:
+            - ./../:/var/www/html/

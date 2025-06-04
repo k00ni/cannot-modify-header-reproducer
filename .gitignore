@@ -1,0 +1,10 @@
+.~lock*
+/.env.local
+/composer.lock
+/symfony.lock
+/phpstan.neon
+/phpunit.xml
+/vendor.zip
+/vendor/
+/var/cache
+/var/log
