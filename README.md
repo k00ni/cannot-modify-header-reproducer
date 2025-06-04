@@ -1,4 +1,4 @@
-Reproducer for [http://localhost:8080](https://github.com/symfony/symfony/issues/59205)
+Reproducer for [https://github.com/symfony/symfony/issues/59205](https://github.com/symfony/symfony/issues/59205)
 
 # How to set up
 
